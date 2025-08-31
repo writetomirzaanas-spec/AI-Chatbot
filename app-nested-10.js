@@ -23,7 +23,7 @@ In case you are trying to access any non standard application, it is recommended
 
 If you believe a specific blocked app is still required in your day to day work, you can submit a request for exception in order to gain the access to the app by filling in the form given below.
 
-<a href="https://bostonconsultinggroup.service-now.com/itconnect" target="_blank">Application excpetion form</a>
+<a href="www.example.com" target="_blank">Application excpetion form</a>
 `;
 
 customResponses["5.2"] = `
