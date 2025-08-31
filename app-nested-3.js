@@ -15,12 +15,12 @@ nestedOptions["3"] = [
  * Extend your customResponses to cover the 3.x choices
  */
 customResponses["3.1"] = `
-If you receive Windows UAC Prompt while ONLY Uninstalling/ Repairing application from control Panel, you can utilize the following link to raise the ticket to LIT team: https://bostonconsultinggroup.service-now.com/itconnect.
+If you receive Windows UAC Prompt while ONLY Uninstalling/ Repairing application from control Panel, you can utilize the following link to raise the ticket to LIT team: www.example.com
 If you receive frequent UAC Prompts while daily activities, repairing BeyondTrust from Software Centre is recommended
 `;
 
 customResponses["3.2"] = `
-A brief guidelines on understanding the BeyondTrust UI Prompts is given here - https://bcgcloudasp-my.sharepoint.com/:w:/g/personal/gunturu_saipriya_bcg_com/EcwVglO1nP5AnrUKhVBa-HoBlAX5h41d7sS185Z6PLWYrA?e=swSwft
+A brief guidelines on understanding the BeyondTrust UI Prompts is given here - www.example.com
 `;
 
 /**
