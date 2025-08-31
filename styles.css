@@ -1,0 +1,496 @@
+/* styles.css */
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #F0F8FF;
+    }
+    .site-container {
+      display: flex;
+      height: 100vh;
+    }
+    
+    /* Left Marketing Section */
+    .marketing-content {
+      flex: 1;
+      padding: 50px;
+      background: #e8e8d5;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .marketing-header {
+      font-size: 38px;
+      font-weight: bold;
+      margin-bottom: 10px;
+	  color: #2e8b57;
+    }
+    .marketing-subheader {
+      font-size: 16px;
+      margin-bottom: 40px;
+	  color: #2e8b57;
+    }
+    
+    /* Container for features and animation side-by-side */
+    .marketing-stack-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    /* Left side: Feature boxes stacked vertically */
+    .marketing-features-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex: 1;
+    }
+    .feature-box {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #333;
+      border-radius: 10px;
+      padding: 10px 20px;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    }
+	.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+	
+    .feature-box h3 {
+      margin: 0;
+      color: #006400;
+      font-size: 15px;
+      line-height: 1.2;
+    }
+    .title-container {
+      display: flex;
+      align-items: center;
+    }
+    .title-logo {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    
+    /* Vertical Divider */
+    .vertical-line {
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, #FFC000, #FFA500, #FFC000);
+      background-size: 200% 200%;
+      animation: verticalLineAnimation 3s linear infinite;
+    }
+    @keyframes verticalLineAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    /* Right side: Orbit animation container */
+    .orbit-animation-container {
+      flex: 1;
+      position: relative;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .orbit-container {
+      position: relative;
+      width: 250px;
+      height: 250px;
+    }
+    /* Center sphere */
+    .center-sphere {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60px;
+      height: 60px;
+      background: radial-gradient(circle, #3CB371, #2E8B57);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-weight: bold;
+      font-size: 12px;
+      text-transform: uppercase;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    /* Orbit ring */
+    .orbit {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 200px;
+      height: 200px;
+      border: 2px dashed #FFC000;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      animation: orbitRotate 12s linear infinite;
+    }
+    @keyframes orbitRotate {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    /* Orbiting icons */
+    .orbit-icon {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      transform: translate(-50%, -50%);
+    }
+    .orbit-icon img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 6px rgba(0,0,0,0);
+      object-fit: cover;
+    }
+    /* Positions for icons */
+    .icon1 { top: 0%; left: 50%; }
+    .icon2 { top: 50%; left: 100%; }
+    .icon3 { top: 100%; left: 50%; }
+    .icon4 { top: 50%; left: 0%; }
+    
+    /* KNOW THE TEAM Panel */
+    #team-panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out;
+      margin-top: 20px;
+      background-color: #e6fff3;
+      padding: 0 20px;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      position: relative;
+    }
+    /* Allow tooltips to extend outside the panel */
+    #team-panel.active {
+      max-height: 600px;
+      overflow: visible;
+    }
+    .team-header {
+      font-size: 20px;
+      font-weight: bold;
+      color: #006400;
+      margin: 15px 0;
+      text-align: center;
+    }
+    .team-members {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 15px;
+      padding-bottom: 20px;
+    }
+    .team-member {
+      text-align: center;
+      position: relative;
+    }
+    /* Wrap team image to enable tooltip positioning */
+    .team-image-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+    .team-photo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #3CB371;
+      cursor: pointer;
+    }
+    .member-name {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #006400;
+    }
+    .member-designation {
+      font-size: 13px;
+      color: #666;
+      margin-top: 4px;
+      text-align: center;
+    }
+    /* Tooltip for copying email */
+    .tooltip {
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 5px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      pointer-events: auto;
+      /* Ensure tooltip appears on top */
+      z-index: 1000;
+    }
+    .team-image-wrapper:hover .tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+    .copy-button {
+      background: #3CB371;
+      color: #fff;
+      border: none;
+      padding: 3px 6px;
+      font-size: 12px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .copy-message {
+      font-size: 12px;
+      color: #fff;
+    }
+    /* Right Chatbot Section */
+    .chat-widget {
+      width: 420px;
+      padding: 20px;
+      background-color: #3ba873;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-y: auto;
+      position: relative;
+    }
+    .chat-container {
+      width: 400px;
+      height: 600px;
+      background-color: #FFFFF2;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+    }
+    .chat-header {
+      background-color: #006400;
+      color: white;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .chat-header img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+    .chat-box {
+      flex: 1;
+      padding: 15px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      scrollbar-width: thin;
+      scrollbar-color: #3CB371 rgba(255,255,255,0.2);
+      scroll-behavior: smooth;
+      transition: scroll 0.3s ease-in-out;
+    }
+    .chat-box::-webkit-scrollbar {
+      width: 8px;
+    }
+    .chat-box::-webkit-scrollbar-track {
+      background: rgba(255,255,255,0.2);
+      border-radius: 10px;
+    }
+    .chat-box::-webkit-scrollbar-thumb {
+      background: linear-gradient(to bottom, #3CB371, #2E8B57);
+      border-radius: 10px;
+      transition: background 0.3s ease-in-out;
+    }
+    .chat-box::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(to bottom, #2E8B57, #1E7A47);
+    }
+    .chat-footer {
+      border-top: 1px solid #ddd;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
+    .footer-button {
+      background: linear-gradient(to right, #FFC000, #FFA500);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+    }
+    .footer-button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to right, #FFA500, #FF8C00);
+    }
+    .know-button {
+      background-color: #3CB371;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+      margin-top: 20px;
+    }
+	.common-green-button {
+      background-color: #3CB371;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+    .common-green-button:hover {
+      transform: scale(1.05);
+      background-color: #5bbd9d;
+    }
+    .common-yellow-button {
+      background: linear-gradient(to right, #FFC000, #FFA500);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 16px;
+      margin: 5px;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+    }
+    .common-yellow-button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to right, #FFA500, #FF8C00);
+    }
+    .send-button-custom-width {
+      width: 80px;
+      background: linear-gradient(to right, #3CB371, #2E8B57);
+      color: white !important;
+      border: none !important;
+      border-radius: 5px !important;
+      padding: 5px !important;
+      cursor: pointer;
+      display: inline-block;
+      white-space: nowrap;
+      margin: 5px 0;
+    }
+    .send-button-custom-width:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to right, #2E8B57, #1E7A47);
+    }
+    .message {
+      max-width: 75%;
+      padding: 10px;
+      border-radius: 15px;
+      margin-bottom: 10px;
+      word-wrap: break-word;
+      animation: fadeIn 0.5s ease-in-out;
+      display: flex;
+      align-items: center;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+    .user-message {
+      align-self: flex-end;
+      background: linear-gradient(to right, #FFC000, #FFA500);
+      color: white;
+	  display: flex;
+      align-items: center;
+    }
+    .bot-message {
+      align-self: flex-start;
+      background: linear-gradient(to right, #3CB371, #2E8B57);
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+    .bot-message img {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+	/* Make any link in a bot‐message bold and yellow */
+.bot-message a {
+  font-weight: bold;
+  color: #FFC000;
+  text-decoration: underline; /* optional */
+}
+    .option-buttons {
+      margin-top: 10px;
+	  margin-bottom: 10px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    #team-button {
+      font-size: 16px;
+      font-weight: normal;
+      background: linear-gradient(270deg, #3CB371, #2E8B57, #3CB371);
+      background-size: 400% 400%;
+      animation: gradientAnimation 3s ease infinite;
+    }
+	.message{
+  font-size: 14px; /* Set your desired font size */
+  line-height: 1.5; /* Optional: adjust line height for consistency */
+  
+}
+.chat-typing-box {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.chat-typing-box textarea {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-size: 14px;
+  resize: none;
+  outline: none;
+}
+
+.chat-typing-box button {
+  background: linear-gradient(to right, #3CB371, #2E8B57);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin-left: 10px;
+  cursor: pointer;
+  outline: none;
+  font-size: 11px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.chat-typing-box button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+

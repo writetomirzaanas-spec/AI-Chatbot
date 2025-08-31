@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>example Support Assistant</title>
+  <!-- Link out to your external CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="app-core.js"></script>
+   <!-- Nested “3.x” submenu logic (defines nestedOptions, extends customResponses, patches sendChoice) -->
+  <script src="app-nested-2.js"></script>
+  <script src="app-nested-3.js"></script>
+  <script src="app-nested-4.js"></script>
+  <script src="app-nested-10.js"></script>
+  <script src="app-nested-7.js"></script>
+  <script src="app-nested-9.js"></script>
+</head>
+<body>
+
+  <div class="site-container">
+    <!-- Left Marketing Section -->
+    <div class="marketing-content">
+      <div class="marketing-header">example Support Agent</div>
+      <div class="marketing-subheader">
+        A virtual agent to help you find the relevant support resources.
+      </div>
+      <!-- Marketing features and animation -->
+      <div class="marketing-stack-container">
+        <!-- Feature boxes -->
+        <div class="marketing-features-stack">
+          <div class="feature-box">
+            <div class="title-container">
+              <img src="https://img.icons8.com/ios-filled/50/3CB371/compass.png" alt="Predefined Path Logo" class="title-logo" />
+              <h3>Predefined Path</h3>
+            </div>
+            <p style="font-size: 14px;">
+              Based on your selection, our agent engages with you and promptly guides you to the appropriate resource.
+            </p>
+          </div>
+          <div class="feature-box">
+            <div class="title-container">
+              <img src="https://img.icons8.com/ios-filled/50/3CB371/idea.png" alt="Smart Query Logo" class="title-logo" />
+              <h3>Smart Query</h3>
+            </div>
+            <p style="font-size: 14px;">
+              Engage with our agent by typing your query to learn more about BT and example and gain key insights.
+            </p>
+          </div>
+          <div class="feature-box">
+            <div class="title-container">
+              <img src="https://img.icons8.com/ios-filled/50/3CB371/new-post.png" alt="Inbuilt Mailer Logo" class="title-logo" />
+              <h3>Inbuilt Mailer</h3>
+            </div>
+            <p style="font-size: 14px;">
+              If predefined resources don't cover your needs, click "Write to us" to email our support team directly.
+            </p>
+          </div>
+        </div>
+        <!-- Divider -->
+        <div class="vertical-line"></div>
+        <!-- Orbit Animation -->
+        <div class="orbit-animation-container">
+          <div class="orbit-container">
+            <div class="center-sphere">example</div>
+            <div class="orbit">
+              <div class="orbit-icon icon1">
+                <img src="https://img.icons8.com/?size=100&id=ONONoVyZoVvz&format=png&color=12B886" alt="Security Logo" />
+              </div>
+              <div class="orbit-icon icon2">
+                <img src="https://img.icons8.com/?size=100&id=118374&format=png&color=12B886" alt="Chat Logo" />
+              </div>
+              <div class="orbit-icon icon3">
+                <img src="https://img.icons8.com/?size=100&id=53435&format=png&color=12B886" alt="Email Logo" />
+              </div>
+              <div class="orbit-icon icon4">
+                <img src="https://img.icons8.com/?size=100&id=ZdthOWHeUPYa&format=png&color=12B886" alt="Help Logo" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- KNOW THE TEAM Button & Panel -->
+      <button id="team-button" class="know-button">Know the Team</button>
+      <div id="team-panel">
+        <div class="team-header"></div>
+        <div class="team-members">
+          <!-- Team Member 1 -->
+          <div class="team-member">
+            <div class="team-image-wrapper">
+              <img src="https://avatars.dicebear.com/api/initials/Abhay%20Zutshi.svg" alt="Abhay Zutshi" class="team-photo" />
+              <div class="tooltip">
+                <span class="email">abhay.zutshi@example.com</span>
+                <button class="copy-button" onclick="copyEmail(event, 'abhay.zutshi@example.com')">Copy</button>
+              </div>
+            </div>
+            <div class="member-name">Abhay Zutshi</div>
+            <div class="member-designation">Product Owner</div>
+          </div>
+          <!-- Team Member 2 -->
+          <div class="team-member">
+            <div class="team-image-wrapper">
+              <img src="https://avatars.dicebear.com/api/initials/Mirza%20Anas%20Beg.svg" alt="Mirza Anas" class="team-photo" />
+              <div class="tooltip">
+                <span class="email">mirza.anas.beg@example.com</span>
+                <button class="copy-button" onclick="copyEmail(event, 'mirza.anas.beg@example.com')">Copy</button>
+              </div>
+            </div>
+            <div class="member-name">Mirza Anas</div>
+            <div class="member-designation">Chapter Lead</div>
+          </div>
+          <!-- Team Member 3 -->
+          <div class="team-member">
+            <div class="team-image-wrapper">
+              <img src="https://avatars.dicebear.com/api/initials/Neha%20Gupta.svg" alt="Neha Gupta" class="team-photo" />
+              <div class="tooltip">
+                <span class="email">neha.gupta@example.com</span>
+                <button class="copy-button" onclick="copyEmail(event, 'neha.gupta@example.com')">Copy</button>
+              </div>
+            </div>
+            <div class="member-name">Neha Gupta</div>
+            <div class="member-designation">Scrum Lead</div>
+          </div>
+          <!-- Team Member 4 -->
+          <div class="team-member">
+            <div class="team-image-wrapper">
+              <img src="https://avatars.dicebear.com/api/initials/Qazi%20Raiss%20Qureshi.svg" alt="Qazi Raiss Qureshi" class="team-photo" />
+              <div class="tooltip">
+                <span class="email">qazi.raiss@example.com</span>
+                <button class="copy-button" onclick="copyEmail(event, 'qazi.raiss@example.com')">Copy</button>
+              </div>
+            </div>
+            <div class="member-name">Qazi</div>
+            <div class="member-designation">Solution Architect</div>
+          </div>
+          <!-- Team Member 5 -->
+          <div class="team-member">
+            <div class="team-image-wrapper">
+              <img src="https://avatars.dicebear.com/api/initials/Varun%20Sharma.svg" alt="Varun Sharma" class="team-photo" />
+              <div class="tooltip">
+                <span class="email">varun.sharma@example.com</span>
+                <button class="copy-button" onclick="copyEmail(event, 'varun.sharma@example.com')">Copy</button>
+              </div>
+            </div>
+            <div class="member-name">Varun</div>
+            <div class="member-designation">Security Engineer</div>
+          </div>
+          <!-- Team Member 6 -->
+          <div class="team-member">
+            <div class="team-image-wrapper">
+              <img src="https://avatars.dicebear.com/api/initials/Radhika%20Keshara.svg" alt="Radhika Keshara" class="team-photo" />
+              <div class="tooltip">
+                <span class="email">radhika.keshara@example.com</span>
+                <button class="copy-button" onclick="copyEmail(event, 'radhika.keshara@example.com')">Copy</button>
+              </div>
+            </div>
+            <div class="member-name">Radhika</div>
+            <div class="member-designation">L3 Engineer</div>
+          </div>
+          <!-- Team Member 7 -->
+          <div class="team-member">
+            <div class="team-image-wrapper">
+              <img src="https://avatars.dicebear.com/api/initials/Sarjinya%20Gunturu.svg" alt="Sarjinya Gunturu" class="team-photo" />
+              <div class="tooltip">
+                <span class="email">sarjinya.gunturu@example.com</span>
+                <button class="copy-button" onclick="copyEmail(event, 'sarjinya.gunturu@example.com')">Copy</button>
+              </div>
+            </div>
+            <div class="member-name">SaiPriya</div>
+            <div class="member-designation">L3 Engineer</div>
+          </div>
+          <!-- Team Member 8 -->
+          <div class="team-member">
+            <div class="team-image-wrapper">
+              <img src="https://avatars.dicebear.com/api/initials/Alexander%20Sprink.svg" alt="Alexander Sprink" class="team-photo" />
+              <div class="tooltip">
+                <span class="email">alexander.sprink@example.com</span>
+                <button class="copy-button" onclick="copyEmail(event, 'alexander.sprink@example.com')">Copy</button>
+              </div>
+            </div>
+            <div class="member-name">Alexander</div>
+            <div class="member-designation">Comms Specialist</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Right Chatbot Widget -->
+    <div class="chat-widget">
+      <div class="chat-container">
+        <div class="chat-header">
+          <img src="https://cdn-icons-png.flaticon.com/512/306/306047.png" alt="Shield Icon" />
+          example Support Assistant
+        </div>
+        <div class="chat-box" id="chat-box"></div>
+		  <!-- Fixed typing box added above chat-footer -->
+  <div class="chat-typing-box">
+    <textarea id="fixedUserTextInput" rows="1" placeholder="Type your message..."></textarea>
+    <button onclick="submitFixedTextQuery()">Send</button>
+  </div>
+  
+        <div class="chat-footer">
+          <button class="footer-button" id="write-button" onclick="showWriteBox()">Write to us</button>
+          <button class="footer-button" id="end-button" onclick="endChat()">End Chat</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </body>
+</html>
+ 
