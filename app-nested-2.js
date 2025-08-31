@@ -17,13 +17,13 @@ nestedOptions["2"] = [
  */
 customResponses["2.1"] = `
 If you want to get BeyondTrust Installed, you can submit a ticket to the LARM L3 Support Team. Utilize the below-mentioned link to raise the ticket: 
-<a href="https://bostonconsultinggroup.service-now.com/itconnect" target="_blank">Raise a Ticket</a>
+<a href="www.example.com" target="_blank">Raise a Ticket</a>
 `;
 
 
 customResponses["2.2"] = `
 In case where you are unable to find BeyondTrust application in Software Centre or want to report BeyondTrust Installation failure, kindly raise a ticket with your Local IT team using the following link: 
-<a href="https://bostonconsultinggroup.service-now.com/itconnect" target="_blank">Raise a Ticket</a>
+<a href="www.example.com" target="_blank">Raise a Ticket</a>
 `;
 
 
